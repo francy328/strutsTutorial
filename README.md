@@ -10,3 +10,6 @@ letto all'avvio.
 2. configuriamo la chiamata alla servlet con gli URL che hano un suffisso uguale a .do (mapping della servlet).
 3.configuriamo la pagina di benevenuto.
 
+
+
+
