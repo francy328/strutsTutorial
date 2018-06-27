@@ -13,6 +13,7 @@ letto all'avvio.
 
 
 ======STRUTS-CONFIG.XML========
+
 questo file ci permette di definire il comportamento del framework senza agire direttamente nel codice.
 in questo file ci sono 5 sezioni:
 1.global-forwards
@@ -33,6 +34,8 @@ sono classi utili per gestire i messaggi in modo unificato, utili per applicazio
 5.plug-in
 classi aggiunte all applicazione
 
+
+=========HELLO WORLD==============
 
 
 
