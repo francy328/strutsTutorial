@@ -21,7 +21,7 @@ possiamo creare delle associazioni tra un nome (che è una azione del controller
 ha tre attributi: il nome dell action; path è l URI verso cui dovrebbe avvenire il forward, comincia con /; classname serve per dichiarare l istanza che estende il bean di configurazione e mantiene tutte le info di forward; di default è org.apache.struts.action.ForwardConfig
 
 2.form-beans
-sono classi particolari che contengono i dati inseriti uin un form all interno di una pagina jsp.
+sono classi particolari che contengono i dati inseriti in un form all interno di una pagina jsp.
 Ha tre attributi principali: ClassName una classe se non si vuole usare il bean di configurazione di default. Il name del bean; il Type 
 una classe java che estende l ActionForm di Struts.
 
@@ -36,6 +36,23 @@ classi aggiunte all applicazione
 
 
 =========HELLO WORLD==============
+i componenti principali dell app:
+1.WEB-INF/web.xml
+2.WEB-INF/struts-config.xml
+3.index.jsp, pages/Welcome.jsp
+4.WEB-INF/classes/message.properties
+5. le api di struts WEB-INF/lib
+6. il pom
+7.la cartella META-INF che contiene il pom.
+9.il file build.xml 
 
 
 
+1. ci sono due tag <servlet> e <-mapping> ed il tag <welcome-file-list> in pratica
+quando tomcat intercetta nell URL *.do chiama il metodo nella classe ActionServlet, che è stata
+oppurtunatamente configurata dal file struts-config.xml
+
+2.col tag <global-forwards> richieste Welcome.do sono associate ad un forward di nome welcome
+col tag <action-mappings> mappiamo l action welcome.do.
+
+3.
