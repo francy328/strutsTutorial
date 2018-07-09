@@ -50,9 +50,13 @@ i componenti principali dell app:
 
 1. ci sono due tag <servlet> e <-mapping> ed il tag <welcome-file-list> in pratica
 quando tomcat intercetta nell URL *.do chiama il metodo nella classe ActionServlet, che è stata
-oppurtunatamente configurata dal file struts-config.xml
+opportunatamente configurata dal file struts-config.xml
 
 2.col tag <global-forwards> richieste Welcome.do sono associate ad un forward di nome welcome
 col tag <action-mappings> mappiamo l action welcome.do.
 
-3.
+PER LE VISTE
+nella index.jsp dichiaro il tag logic e si effettua il forward all action con nome welcome.
+
+nella pages/welcome.jsp sonoimportate delle direttive e tramite il tag bean leggiamo dal file
+messageResources.properties
