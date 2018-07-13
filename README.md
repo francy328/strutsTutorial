@@ -60,3 +60,6 @@ nella index.jsp dichiaro il tag logic e si effettua il forward all action con no
 
 nella pages/welcome.jsp sonoimportate delle direttive e tramite il tag bean leggiamo dal file
 messageResources.properties
+
+========================================================
+
