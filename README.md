@@ -33,6 +33,8 @@ sono classi utili per gestire i messaggi in modo unificato, utili per applicazio
 5.plug-in
 classi aggiunte all applicazione
 
+in breve
+
 
 
 
