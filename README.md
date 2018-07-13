@@ -54,6 +54,7 @@ opportunatamente configurata dal file struts-config.xml
 
 2.col tag <global-forwards> richieste Welcome.do sono associate ad un forward di nome welcome
 col tag <action-mappings> mappiamo l action welcome.do.
+<<<<<<< HEAD
 
 PER LE VISTE
 nella index.jsp dichiaro il tag logic e si effettua il forward all action con nome welcome.
@@ -62,4 +63,11 @@ nella pages/welcome.jsp sonoimportate delle direttive e tramite il tag bean legg
 messageResources.properties
 
 ========================================================
+=======
 
+PER LE VISTE
+nella index.jsp dichiaro il tag logic e si effettua il forward all action con nome welcome.
+>>>>>>> 05dbdc895ab907e16b1b6bf4b65af0106d6ac4e2
+
+nella pages/welcome.jsp sonoimportate delle direttive e tramite il tag bean leggiamo dal file
+messageResources.properties
