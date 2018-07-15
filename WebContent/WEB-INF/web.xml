@@ -23,7 +23,7 @@
 <web-app>
   <display-name>Struts Blank Application</display-name>
   
-  <!-- Standard Action Servlet Configuration -->
+  <!-- Standard Action Servlet Configuration IL CONTROLLER DI QUESTA APPLICAZIONE-->
   <servlet>
     <servlet-name>action</servlet-name>
     <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>

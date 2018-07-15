@@ -54,15 +54,57 @@ opportunatamente configurata dal file struts-config.xml
 
 2.col tag <global-forwards> richieste Welcome.do sono associate ad un forward di nome welcome
 col tag <action-mappings> mappiamo l action welcome.do.
-<<<<<<< HEAD
 
-PER LE VISTE
-nella index.jsp dichiaro il tag logic e si effettua il forward all action con nome welcome.
 
-nella pages/welcome.jsp sonoimportate delle direttive e tramite il tag bean leggiamo dal file
-messageResources.properties
+FUNZIONAMENTO A GRANDI LINEE
+org.apache.struts.action.ActionServlet è IL CONTROLLER DI QUESTA APPLICAZIONE
+riceve una richiesta e istanzia un oggetto di una classe Action ossia si comporta 
+da Action Factory.
+Implementa come tutte le servlet i metodi doGet e doPost che chiamano il metodo process
+ossia RequestProcessor.process(), una volta invocato questo metodo reperisce dal file struts.xml
+l 'elemento action che corrisponde al path submitted (ossia il path specificato nella URL) della richiesta.
+NEll esempio è Welcome.do contenuto nell URL
+http://localhost:8080/ProvaStruts_1/Welcome.do
+Il processor adesso, cerca nel file Strut-config.xml l action Welcome.so e trova
+<action
+            path="/Welcome"
+            forward="/pages/Welcome.jsp"/>
+quindi restituisce la pagina Welcome.jsp.
 
-=======
+Esempio:
+chiamo 
+http://localhost:8080/ProvaStruts_1/Pippo.do
+e
+voglio visualizzare la pagina Pippo.jsp
 
-========================================================
+Il controller istanzia oggetti della classe action, quindi nella classe action viene implentata la logica applicativa
+Sono configurate nel file strut-config.xml il nome deve terminare in .do, in questo moto si indica che sara processata 
+come action e non come servlet. Tramite le Action si possono ricevere le richieste dal Form elaborare i dati e lancia le view.
+Per creare un action:
+1. serve una classe che estende la classe org.apache.struts.action.Action
+2.implementare il metodo execute in cui scriviamo la logica
+3.aggiungere un elemento action nel file strut-config.xml
+
+
+VEDIAMO I COMPONENTI NECESSARI A CREARE E GESTIRE UN FORM
+Passi da compiere:
+1.creo una view che contenga il form usando la taglib HTML e la vista result.jsp
+2.Creo un oggetto actionForm che contiene i dati del form, la classe ActionForm mi permette di prendere 
+  i dati dal form e trasferirli al controller
+3.creo un Action che sara invocata invocata dal controller e gestira la richiesta
+4.Modificare il file strut-config.xml 
+
+
+FUNZIONAMETO IN BREVE:
+chiamo :
+http://localhost:8080/ProvaStruts_1/pages/esempio.jsp
+e tomcat restituisce la pagina jsp, al click del bottone sul form 
+che è un form costruito con i tag library di struts, in controller cerca nel file struts-config.xml
+l action associata al form ed esegue il metodo execute, quidi esegue un forward all elemento indicato con la parola risultato
+che è la vista risultato.jsp.
+
+
+
+
+
 
